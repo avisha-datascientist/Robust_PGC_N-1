@@ -99,11 +99,10 @@ if __name__ == '__main__':
     model_name = args.name
     print('model_name: ', model_name)
      
-    base_path = '/work/smavbhir/project_thesis/SMAAC'
+    base_path = '.'
     OUTPUT_DIR = 'result'
     DATA_DIR = 'data'
-    #OUTPUT_DIR = './result'
-    #DATA_DIR = './data'
+
     result_dir = os.path.join(base_path, OUTPUT_DIR)
     output_result_dir = os.path.join(result_dir, model_name)
     model_path = os.path.join(output_result_dir, 'model')
