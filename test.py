@@ -250,17 +250,16 @@ if __name__ == '__main__':
     args = cli()
     seed_everything(args.seed)
 
-    # wandb.login()
     # settings
     model_name = f'{args.name}_{args.seed}'
     print('model name: ', model_name)
     print('Printing cuda version')
     print(torch.version.cuda) 
-    base_path = 'project_thesis/SMAAC'
+    base_path = '.'
     OUTPUT_DIR = 'result'
     DATA_DIR = 'data'
     # change serialization directory accordingly
-    SERIALIZATION_DIR = 'serialized/agents/case_wcci/SMAAC_100k_0.1'
+    SERIALIZATION_DIR = 'serialized/agents'
  
     result_dir = os.path.join(base_path, OUTPUT_DIR)
     output_result_dir = os.path.join(result_dir, model_name)
