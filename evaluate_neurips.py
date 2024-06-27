@@ -77,7 +77,7 @@ if __name__ == '__main__':
     model_name = args.name
     print('model_name: ', model_name)
 
-    base_path = '/work/smavbhir/project_thesis/SMAAC'
+    base_path = '.'
     OUTPUT_DIR = 'result'
     DATA_DIR = 'data'
     result_dir = os.path.join(base_path, OUTPUT_DIR)   
@@ -91,8 +91,7 @@ if __name__ == '__main__':
     evaluation_kit = "starting_k_test"
     env_name = ENV_CASE[args.case]
     data_r_dir = os.path.join(base_path, DATA_DIR)
-    test_data_path = os.path.join(data_r_dir, 'evaluation_kits', 'neurips_2020_robustness')
-    env_path = os.path.join(test_data_path, evaluation_kit, 'L2RPN_neurips2020_track1_starting_kit', 'input_data_local')
+    env_path = os.path.join(data_r_dir, evaluation_kit, 'L2RPN_neurips2020_track1_starting_kit', 'input_data_local')
     chronics_path = os.path.join(env_path, 'chronics')
     cversion_path = os.path.join(model_path, 'current_version')
     
